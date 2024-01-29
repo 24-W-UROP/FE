@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!--
+// v0 by Vercel.
+// https://v0.dev/t/6pf05mwlmwb
+-->
+
+<div class="flex h-screen w-full flex-col items-center justify-center bg-white px-4 text-center">
+    <div class="mb-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        class="h-20 w-20 text-[#BFD8AF]"
+      >
+        <circle cx="12" cy="12" r="10"></circle>
+      </svg>
+      <h1 class="mt-2 text-4xl font-bold text-gray-800">Co-Room</h1>
+    </div>
+    <div class="flex w-full max-w-xs flex-col space-y-4">
+      <button onclick="redirectMylistPage()" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-[#BFD8AF] text-black">
+        나의 예약 현황
+      </button>
+      <button onclick="redirectToRsvPage()" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:bg-primary/90 h-10 px-4 py-2 bg-[#BFD8AF] text-black">
+        강의실 예약
+      </button>
+      <svg
+        onclick="redirectToIndexPage()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-gray-600"
+        >
+          <path d="m12 19-7-7 7-7"></path>
+          <path d="M19 12H5"></path>
+        </svg>
+    </div>
+  </div>
+
+  <script>
+    function redirectToRsvPage() {
+        // 로그인 페이지로 이동하는 로직을 작성
+        window.location.href = 'rsv.html';
+    }
+    function redirectMylistPage() {
+        // 로그인 페이지로 이동하는 로직을 작성
+        window.location.href = 'mylist.html';
+    }
+    function redirectToIndexPage() {
+        // 로그인 페이지로 이동하는 로직을 작성
+        window.location.href = 'index.html';
+    }
+  </script>
+</body>
+</html>

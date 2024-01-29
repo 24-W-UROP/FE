@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!--
+// v0 by Vercel.
+// https://v0.dev/t/ZMOcNd6DFv1
+-->
+
+<main class="flex flex-col items-center justify-center min-h-screen bg-gray-50 dark:bg-gray-900">
+    <div
+      class="rounded-lg border bg-card text-card-foreground shadow-sm w-full max-w-md p-8 space-y-6"
+      data-v0-t="card"
+    >
+    <svg
+    onclick="redirectToUserindexPage()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-gray-600"
+        >
+          <path d="m12 19-7-7 7-7"></path>
+          <path d="M19 12H5"></path>
+        </svg>
+      <div class="flex flex-col space-y-1.5 p-6">
+        <h3 class="text-2xl font-semibold whitespace-nowrap leading-none tracking-tight">강의실 예약</h3>
+        <p class="text-sm text-muted-foreground">원하는 강의실과 시간을 선택해주세요.</p>
+      </div>
+      <div class="p-6">
+        <div class="grid gap-4">
+          <div class="space-y-2">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="classroom"
+            >
+              강의실
+            </label>
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="classroom"
+              placeholder="강의실 이름"
+            />
+          </div>
+          <div class="grid gap-4">
+            <div class="space-y-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="date"
+              >
+                날짜
+              </label>
+              <input
+                type="date"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="date"
+              />
+            </div>
+            <div class="space-y-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="start-time"
+              >
+                예약 시작 시간
+              </label>
+              <input
+                type="time"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="start-time"
+              />
+            </div>
+            <div class="space-y-2">
+              <label
+                class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                for="end-time"
+              >
+                예약 종료 시간
+              </label>
+              <input
+                type="time"
+                class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+                id="end-time"
+              />
+            </div>
+          </div>
+          <div class="space-y-2">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="reason"
+            >
+              사용 이유
+            </label>
+            <input
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="reason"
+              placeholder="사용 이유를 입력해주세요."
+            />
+          </div>
+          <div class="space-y-2">
+            <label
+              class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+              for="people"
+            >
+              사용 인원
+            </label>
+            <input
+              type="number"
+              class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+              id="people"
+              placeholder="사용 인원을 입력해주세요."
+            />
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center p-6">
+        <button onclick="confirmAndRedirect('userindex.html')" class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full bg-[#BFD8AF] text-black">
+          예약하기
+        </button>
+      </div>
+    </div>
+  </main>
+  <script>
+    function redirectToUserindexPage() {
+        // 로그인 페이지로 이동하는 로직을 작성
+        window.location.href = 'userindex.html';
+    }
+    function confirmAndRedirect(targetPage) {
+            var confirmation = confirm("예약이 완료되었습니다.");
+            
+            if (confirmation) {
+                window.location.href = targetPage;
+            }
+        }
+  </script>
+</body>
+</html>

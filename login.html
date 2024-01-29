@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!--
+// v0 by Vercel.
+// https://v0.dev/t/rurTX4GW8pM
+-->
+<div class="mx-auto max-w-sm py-10" >
+    <svg
+        onclick="redirectToIndexPage()"
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          class="text-gray-600"
+        >
+          <path d="m12 19-7-7 7-7"></path>
+          <path d="M19 12H5"></path>
+        </svg>
+    <div class="space-y-2 text-center">
+      <h1 class="text-3xl font-bold">로그인</h1>
+      <p class="text-gray-500 dark:text-gray-400">co-room</p>
+    </div>
+    <div class="space-y-4">
+      
+      <div class="space-y-2">
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="student-id"
+        >
+          학번
+        </label>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          id="student-id"
+          placeholder="Enter your student ID"
+          required=""
+        />
+      </div>
+    
+      <div class="space-y-2">
+        <label
+          class="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+          for="password"
+        >
+          비밀번호
+        </label>
+        <input
+          class="flex h-10 w-full rounded-md border border-input bg-background px-3 py-2 text-sm ring-offset-background file:border-0 file:bg-transparent file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50"
+          id="password"
+          required=""
+          type="password"
+        />
+      </div>
+      <button
+      onclick="confirmAndRedirect()"
+        class="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-4 py-2 w-full bg-[#BFD8AF] text-black"
+        type="submit"
+      >
+        로그인
+      </button>
+    </div>
+  </div>
+  <script>
+    function redirectToIndexPage() {
+        // 로그인 페이지로 이동하는 로직을 작성
+        window.location.href = 'index.html';
+    }
+    function confirmAndRedirect() {
+
+            if (document.getElementById('password').value == 1234)
+            {
+            var confirmation = confirm("로그인 되었습니다.");
+            var targetPage = 'userindex.html';
+            if (confirmation) {
+                window.location.href = targetPage;
+            }
+            }
+            else if (document.getElementById('password').value == 'admin')
+            {
+            var targetPage = 'adminindex.html';
+            var confirmation = confirm("관리자로 로그인 되었습니다.");
+            
+            if (confirmation) {
+                window.location.href = targetPage;
+            }
+            }
+            else {
+                var confirmation = confirm("로그인에 실패하였습니다.");
+            }
+            
+        }
+</script>
+</body>
+</html>
